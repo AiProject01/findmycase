@@ -1,29 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>About Us</title>
+  <meta charset="UTF-8">
+  <title>About Us | FindMyCase</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #fefae0;
+      color: #283618;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    h1 {
+      color: #606c38;
+      text-align: center;
+    }
+    .lang-btn {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #dda15e;
+      color: #283618;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .content {
+      line-height: 1.8;
+      font-size: 16px;
+    }
+  </style>
 </head>
+
 <body>
+  <div class="container">
+    <h1>About Us</h1>
 
-<button onclick="toggleLang()">🌐 हिंदी / English</button>
+    <button class="lang-btn" onclick="toggleLanguage()">Change Language</button>
 
-<p id="aboutText">
-FindMyCase is a student AI project that helps users find applicable Indian laws based on crime description.
-</p>
+    <!-- English Content -->
+    <div id="english" class="content">
+      <p>
+        FindMyCase is a student-developed AI-based web application created with the aim of making legal
+        information more accessible and understandable for common people. In India, many citizens are
+        unaware of the laws that protect them or apply to situations they face in daily life. This lack
+        of awareness often prevents people from taking the right legal steps.
+      </p>
 
-<a href="index.html">⬅ Back</a>
+      <p>
+        Our platform allows users to enter a crime-related keyword or short description and instantly
+        receive relevant Indian laws and acts. The system uses a rule-based Artificial Intelligence
+        approach with keyword matching to identify applicable legal sections. Although simple, this
+        approach is effective at a basic level and suitable for educational purposes.
+      </p>
 
-<script>
-let hindi = false;
-function toggleLang() {
-  hindi = !hindi;
-  document.getElementById("aboutText").innerText =
-    hindi
-    ? "FindMyCase एक छात्र परियोजना है जो अपराध विवरण के आधार पर भारतीय कानून खोजने में मदद करती है।"
-    : "FindMyCase is a student AI project that helps users find applicable Indian laws.";
-}
-</script>
+      <p>
+        FindMyCase supports both English and Hindi languages, ensuring inclusivity and better reach.
+        The website also includes a review section where users can share their experiences and feedback,
+        helping us understand how the platform can be improved further.
+      </p>
 
+      <p>
+        This project has been developed as part of a Class XII AI Capstone Project and aligns with the
+        Sustainable Development Goals by promoting justice, awareness, and access to information.
+        In the future, this platform can be enhanced using Machine Learning models, larger datasets,
+        and real-time legal databases.
+      </p>
+    </div>
+
+    <!-- Hindi Content -->
+    <div id="hindi" class="content" style="display:none;">
+      <p>
+        FindMyCase एक छात्र द्वारा विकसित AI आधारित वेब एप्लिकेशन है, जिसका उद्देश्य आम लोगों को
+        कानूनी जानकारी आसानी से उपलब्ध कराना है। भारत में बहुत से नागरिक अपने अधिकारों और उन कानूनों
+        से अनजान होते हैं जो उनकी सुरक्षा करते हैं। इस कारण वे सही समय पर उचित कानूनी कदम नहीं उठा पाते।
+      </p>
+
+      <p>
+        यह प्लेटफॉर्म उपयोगकर्ता को अपराध से संबंधित शब्द या छोटा विवरण दर्ज करने की सुविधा देता है,
+        जिसके आधार पर संबंधित भारतीय कानून और धाराएँ प्रदर्शित की जाती हैं। यह प्रणाली
+        rule-based Artificial Intelligence का उपयोग करती है, जिसमें keyword matching द्वारा
+        उपयुक्त कानूनों की पहचान की जाती है।
+      </p>
+
+      <p>
+        FindMyCase अंग्रेज़ी और हिंदी दोनों भाषाओं को सपोर्ट करता है, जिससे अधिक लोगों तक इसकी पहुँच
+        सुनिश्चित होती है। वेबसाइट में एक review सेक्शन भी है जहाँ उपयोगकर्ता अपने अनुभव और सुझाव
+        साझा कर सकते हैं।
+      </p>
+
+      <p>
+        यह परियोजना कक्षा 12 की AI Capstone Project का हिस्सा है और Sustainable Development Goals
+        के अनुरूप न्याय, जागरूकता और सूचना तक पहुँच को बढ़ावा देती है। भविष्य में इस प्लेटफॉर्म को
+        Machine Learning और बड़े कानूनी डेटाबेस के साथ और भी बेहतर बनाया जा सकता है।
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function toggleLanguage() {
+      const eng = document.getElementById("english");
+      const hin = document.getElementById("hindi");
+
+      if (eng.style.display === "none") {
+        eng.style.display = "block";
+        hin.style.display = "none";
+      } else {
+        eng.style.display = "none";
+        hin.style.display = "block";
+      }
+    }
+  </script>
 </body>
 </html>
