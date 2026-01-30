@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button onclick="toggleLang()">🌐 हिंदी / English</button>
+
+<p id="aboutText">
+FindMyCase is a student AI project that helps users find applicable Indian laws based on crime description.
+</p>
+
+<a href="index.html">⬅ Back</a>
+
+<script>
+let hindi = false;
+function toggleLang() {
+  hindi = !hindi;
+  document.getElementById("aboutText").innerText =
+    hindi
+    ? "FindMyCase एक छात्र परियोजना है जो अपराध विवरण के आधार पर भारतीय कानून खोजने में मदद करती है।"
+    : "FindMyCase is a student AI project that helps users find applicable Indian laws.";
+}
+</script>
+
+</body>
+</html>
