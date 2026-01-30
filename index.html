@@ -2,21 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Find My Case</title>
+  <title>FindMyCase</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="container">
-    <h1>Find My Case</h1>
-    <p>Describe your issue to find relevant Indian laws</p>
+<header>
+  <h1 id="title">Find Applicable Laws</h1>
+  <button onclick="toggleLanguage()">🌐 हिंदी / English</button>
+</header>
 
-    <textarea id="userInput" placeholder="Type your case here..."></textarea>
-    <button onclick="findLaw()">Find Law</button>
+<div class="search-box">
+  <input type="text" id="userInput" placeholder="Describe the crime...">
+  <button onclick="findLaw()">Search</button>
+</div>
 
-    <div id="result"></div>
-  </div>
+<div id="result"></div>
 
-  <script src="script.js"></script>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="review.html">Reviews</a>
+  <a href="about.html">About Us</a>
+</nav>
+
+<script src="script.js"></script>
 </body>
 </html>
